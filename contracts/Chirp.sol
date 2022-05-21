@@ -4,8 +4,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-/** @dev Hazel
- *  Social media dapp that tokenizes a user's short post.  
+/** @dev Hazel 
  */
 contract Chirp is ERC721URIStorage {
 
