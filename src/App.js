@@ -47,7 +47,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App background-black font-white">
         <>
           <Navbar expand="lg" bg="secondary" variant="dark">
             <Container>

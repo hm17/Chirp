@@ -108,7 +108,7 @@ const Profile = ({ contract }) => {
                             />
                             <Form.Control onChange={(e) => setUsername(e.target.value)} size="lg" required type="text" placeholder="Username" />
                             <div className="d-grid px-0">
-                                <Button onClick={mintProfile} variant="primary" size="lg">
+                                <Button onClick={mintProfile} variant="primary" size="lg" style={{backgroundColor: 'teal', border: 'teal'}}>
                                     Mint NFT Profile
                                 </Button>
                             </div>
@@ -122,14 +122,14 @@ const Profile = ({ contract }) => {
                         if (nft.id === profile.id) return
                         return (
                             <Col key={idx} className="overflow-hidden">
-                                <Card>
+                                <Card style={{backgroundColor: '#818589', border: '#818589'}}>
                                     <Card.Img variant="top" src={nft.avatar} />
                                     <Card.Body color="secondary">
                                         <Card.Title>{nft.username}</Card.Title>
                                     </Card.Body>
                                     <Card.Footer>
                                         <div className='d-grid'>
-                                            <Button onClick={() => switchProfile(nft)} variant="primary" size="lg">
+                                            <Button onClick={() => switchProfile(nft)} variant="primary" size="lg" style={{backgroundColor: 'teal', border: 'teal'}}>
                                                 Set as Profile
                                             </Button>
                                         </div>

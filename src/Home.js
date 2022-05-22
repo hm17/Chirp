@@ -95,8 +95,8 @@ const Home = ({ contract, account }) => {
                             <Row className="g-4">
                                 <Form.Control onChange={(e) => setPost(e.target.value)} size="lg" required as="textarea" />
                                 <div className="d-grid px-0">
-                                    <Button onClick={uploadPost} variant="primary" size="lg">
-                                        Post!
+                                    <Button onClick={uploadPost} variant="primary" size="lg" style={{backgroundColor: 'teal', border: 'teal'}}>
+                                        CHIRP
                                     </Button>
                                 </div>
                             </Row>
@@ -117,7 +117,7 @@ const Home = ({ contract, account }) => {
                 posts.map((post, key) => {
                     return (
                         <div key={key} className="col-lg-12 my-3 mx-auto" style={{ width: '1000px' }}>
-                            <Card border="primary">
+                            <Card border="primary" style={{backgroundColor: 'gray', border: 'white'}}>
                                 <Card.Header>
                                     <img
                                     className='mr-2'
@@ -137,11 +137,11 @@ const Home = ({ contract, account }) => {
                                         {post.content}
                                     </Card.Title>
                                 </Card.Body>
-                                <Card.Footer className="list-group-item">
+                                <Card.Footer className="list-group-item" style={{backgroundColor: '#818589'}}>
                                     <div className="d-inline mt-auto float-start"> Tip Amount: {ethers.utils.formatEther(post.tip)} ETH</div>
                                     {address === post.author.address || !hasProfile ?
                                         null : <div className="d-inline float-end">
-                                            <Button onClick={() => tip(post)} className="px-0 py-0 font-size-16" variant="link" size="md">
+                                            <Button onClick={() => tip(post)} className="px-0 py-0 font-size-16" variant="link" size="md" style={{color: 'yellow'}}>
                                                 Tip for 0.1 ETH
                                             </Button>
                                         </div>}
